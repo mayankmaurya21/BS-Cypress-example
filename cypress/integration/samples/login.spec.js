@@ -13,7 +13,7 @@ describe('E2E Tests - Login', () => {
     })
 
     it('I submit valid login credentials', () => {
-        cy.get('#username').type(Cypress.env(${user}))
+        cy.get('#username').type(Cypress.env(user))
         cy.get('#password').type('SuperSecretPassword!')
         cy.get('button[type="submit"]').click()
         cy.get('.flash.success').should('be.visible')
