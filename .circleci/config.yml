@@ -28,7 +28,7 @@ jobs:
       # to run the "manual" tests
       - circleci-cli/install
       - run: npm install --save-dev browserstack-cypress-cli
-      - run: npx browserstack-cypress run --sync
+      - run: npx browserstack-cypress --username mayankmaurya4 --key JzJJjes3cyzHaynTqJpe run --sync
 workflows:
   orb_tests:
     jobs:
