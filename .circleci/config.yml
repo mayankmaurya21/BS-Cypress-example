@@ -18,7 +18,6 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: npm ci
 
       - save_cache:
           paths:
@@ -29,7 +28,6 @@ jobs:
       # to run the "manual" tests
       - circleci-cli/install
       - run: cypress run
-
 workflows:
   orb_tests:
     jobs:
