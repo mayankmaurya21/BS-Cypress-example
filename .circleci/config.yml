@@ -29,7 +29,6 @@ jobs:
       # to run the "manual" tests
       - circleci-cli/install
       - run: cypress run
-      
 
 workflows:
   orb_tests:
