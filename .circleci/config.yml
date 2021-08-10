@@ -27,8 +27,8 @@ jobs:
       # we need to install CircleCI CLI tool
       # to run the "manual" tests
       - circleci-cli/install
-      - run: npm install browserstack-cypress-cli
-      - run: browserstack-cypress run --sync
+      - run: npm install --save-dev browserstack-cypress-cli
+      - run: npx browserstack-cypress run --sync
 workflows:
   orb_tests:
     jobs:
