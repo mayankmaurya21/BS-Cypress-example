@@ -5,7 +5,7 @@ describe('E2E Tests - Login', () => {
     })
 
     it('I submit invalid login credentials', () => {
-        cy.get('#username').type(Cypress.env('invaliduser'))
+        cy.get('#username').type('invalid_usr')
         cy.get('#password').type('invalid_pass')
         cy.get('button[type="submit"]').click()
         cy.get('.flash.error').should('be.visible')
@@ -13,7 +13,7 @@ describe('E2E Tests - Login', () => {
     })
 
     it('I submit valid login credentials', () => {
-        cy.get('#username').type(Cypress.env('user'))
+        cy.get('#username').type('tomsmith')
         cy.get('#password').type('SuperSecretPassword!')
         cy.get('button[type="submit"]').click()
         cy.get('.flash.success').should('be.visible')
